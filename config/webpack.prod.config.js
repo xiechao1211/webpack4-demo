@@ -18,7 +18,7 @@ module.exports = merge(baseWebpackConfig,{
     },
     // webpack打包时的插件配置
     plugins:[
-        // 清理dist陌路
+        // 清理dist目录
         new CleanWebpackPlugin([distPath],{root: path.resolve(__dirname, '../')}),
         // 混淆压缩js
         new UglifyJSPlugin(),
