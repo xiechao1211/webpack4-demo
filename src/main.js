@@ -1,6 +1,8 @@
 import './styles/main.less'
 import './styles/index.css'
 import {buppleSort,dumpArr,quickSort,LoopQuene, BST} from './utils'
+import './styles/reset.css'
+
 
 
 let arr = [1,2,44,22,55,6,3,2]
