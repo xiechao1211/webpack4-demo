@@ -5,7 +5,7 @@ import './styles/reset.css'
 import opsUtils from './opsUtils/index'
 
 let ops = new opsUtils()
-
+$('.header').text('123')
 
 
 let arr = [1,2,44,22,55,6,3,2]
