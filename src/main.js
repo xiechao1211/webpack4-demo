@@ -1,5 +1,6 @@
 import './styles/main.less'
 import './styles/index.css'
+import './styles/reset.css'
 import {buppleSort,dumpArr} from './utils'
 
 
