@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path")
 
 function resolve(dir) {
@@ -8,7 +9,8 @@ module.exports = {
   context: path.resolve(__dirname, "../"),
   // webpack入口
   entry: {
-    app: "./src/main.js"
+    app: "./src/main.js",
+    opsUtils: './src/opsUtils/index.js'
   },
   // webpack输出
   output: {
@@ -26,7 +28,8 @@ module.exports = {
       {
         test: /\.less$/,
         use:[
-            "style-loader",
+            // "style-loader",
+            MiniCssExtractPlugin.loader,
             {loader: "css-loader",options:{sourceMap: true, importLoaders: 1}},
             "postcss-loader",
             "less-loader"
@@ -35,12 +38,16 @@ module.exports = {
       {
         test: /\.css$/,
         use:[
-            "style-loader",
+            // "style-loader",
+            MiniCssExtractPlugin.loader,
             {loader: "css-loader",options:{sourceMap: true, importLoaders: 1}},
             "postcss-loader"
         ]
       },
 
     ]
+  },
+  plugins: {
+
   }
 };

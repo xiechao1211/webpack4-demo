@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const merge = require("webpack-merge")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const baseWebpackConfig = require("./webpack.base.config")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = merge(baseWebpackConfig, {
   // webpack-dev-server相关配置
@@ -26,6 +27,9 @@ module.exports = merge(baseWebpackConfig, {
   // webpack dev模式下的插件配置
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+        filename: "[name].css"
+    }),
     new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'index.html',

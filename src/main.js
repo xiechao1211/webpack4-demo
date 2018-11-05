@@ -2,6 +2,9 @@ import './styles/main.less'
 import './styles/index.css'
 import {buppleSort,dumpArr,quickSort,LoopQuene, BST} from './utils'
 import './styles/reset.css'
+import opsUtils from './opsUtils/index'
+
+let ops = new opsUtils()
 
 
 

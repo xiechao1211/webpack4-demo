@@ -14,9 +14,9 @@ module.exports = merge(baseWebpackConfig,{
     output:{
         path: distPath,
         // js文件提取路径 path.posix 跨平台兼容路径
-        filename: path.posix.join('static','js/[name].[chunkhash].js'),
+        filename: path.posix.join('static','[name]/[name].[chunkhash].js'),
         // 公共文件提取路径
-        chunkFilename: path.posix.join('static','js/[name].[chunkhash].js')
+        chunkFilename: path.posix.join('static','[name]/[name].[chunkhash].js')
     },
     // webpack打包时的插件配置
     plugins:[
@@ -24,7 +24,7 @@ module.exports = merge(baseWebpackConfig,{
         new CleanWebpackPlugin([distPath],{root: path.resolve(__dirname, '../')}),
         // css提取成单独的文件
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: path.posix.join('static','[name]/[name].css')
         }),
         // Compress extracted CSS. We are using this plugin so that possible
         // duplicated CSS from different components can be deduped.
