@@ -1,4 +1,5 @@
 import '../styles/main.less'
+import { resolve } from 'upath';
 
 class opsUtils {
     constructor(){
@@ -8,6 +9,9 @@ class opsUtils {
     init(){
         this.arr.map(item=>{
             console.log(`opsUtils${item}`)
+        })
+        return new Promise(resolve=>{
+            resolve()
         })
 
     }

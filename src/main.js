@@ -38,17 +38,19 @@ let hash = {}
 // 数组去重
 arr3 = dumpArr(arr3,'id')
 // arr3[0]['id'] = 2222
-arr3.map(item=>{
-    console.log(item)
-})
+
 let result = []
 result = arr.reduce((pre,cur,index)=>{
+    // debugger
+    console.log(pre)
+    console.log(cur)
     if(pre.length === 0 || pre[pre.length -1] !== cur){
         pre.push(cur)
     }
-})
-console.log(arr3)
-console.log(quickSort(arr))
+    return pre
+},[])
+// console.log(arr3)
+// console.log(quickSort(arr))
 
 const debounce = function(func, wait) {
     // 设置定时器
