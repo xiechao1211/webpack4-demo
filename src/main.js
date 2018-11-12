@@ -34,8 +34,10 @@ let hash = {}
 // 数组去重
 arr3 = dumpArr(arr3,'id')
 // arr3[0]['id'] = 2222
-
-console.log(arr3)
+console.log(arr3);
+arr3.map(item=>{
+    console.log(item)
+})
 let result = []
 result = arr.reduce((pre,cur,index)=>{
     if(pre.length === 0 || pre[pre.length -1] !== cur){

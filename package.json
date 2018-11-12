@@ -12,10 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/runtime": "^7.0.0",
